@@ -1,0 +1,49 @@
+{
+  "name": "algorithmicon",
+  "version": "1.0.0",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Igor Savin",
+      "email": "kibertoad@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "jest --config=jest.config.json",
+    "test:coverage": "jest --config=jest.config.json --coverage",
+    "test:ci": "npm run eslint && npm run test:coverage",
+    "eslint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"utils/**/*.js\"",
+    "prettier": "prettier --write \"{code-kata,code-monoku,utils}/**/*.js\" index.js"
+  },
+  "dependencies": {
+    "eol": "^0.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  },
+  "jest": {
+    "collectCoverage": false
+  },
+  "homepage": "http://github.com/kibertoad/algorithmicon",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kibertoad/algorithmicon.git"
+  },
+  "keywords": [
+    "algorithms",
+    "training",
+    "code",
+    "kata"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "code-kata/*",
+    "code-monoku/*",
+    "utils/*"
+  ]
+}

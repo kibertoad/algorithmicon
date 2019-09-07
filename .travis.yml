@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+  - '6'
+  - '12'
+
+script:
+  - npm run-script test:ci
+
+notifications:
+  email: true
