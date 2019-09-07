@@ -5,8 +5,9 @@ function generateOrderedStrings(size) {
   const result = []
 
   for (let i = 0; i < size; i++) {
-
-    const char = String.fromCharCode(LETTERS_START_CODE + (i % (LETTERS_END_CODE - LETTERS_START_CODE)))
+    const char = String.fromCharCode(
+      LETTERS_START_CODE + (i % (LETTERS_END_CODE - LETTERS_START_CODE))
+    )
     result.push(char)
   }
 
