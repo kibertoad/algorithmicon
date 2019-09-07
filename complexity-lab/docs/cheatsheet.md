@@ -13,9 +13,9 @@ that iterates through given array exactly once.
 
 * Linearithmic time: O(n log n). This is complexity of optimized sorting algorithms, such as heapsort, mergesort and quicksort. 
 
-* Quadratic time: O(n-square(2)). Execution time is proportional to the square (n\*n) of the input size.
+* Quadratic time: O(n-power(2)). Execution time is proportional to the square (n\*n) of the input size.
 
-* Cubic time: O(n-cube(3)). Execution time is proportional to the cube (n\*n\*n) of the input size.
+* Cubic time: O(n-power(3)). Execution time is proportional to the cube (n\*n\*n) of the input size.
 
 * Exponential time: O(2-power(n)). Execution time is proportional to the exponentiation (2 power n) by the input size.
 
