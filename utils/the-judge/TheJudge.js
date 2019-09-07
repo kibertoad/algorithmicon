@@ -27,12 +27,16 @@ function compareOutputs(inputs, implementationFn) {
     errors: []
   }
   inputs.forEach((inputFile) => {
-    const actualOutput = implementationFn(inputFile.input).map((line) => {
+    let actualOutput = implementationFn(inputFile.input)
+    if (!Array.isArray(actualOutput)) {
+      actualOutput = [actualOutput]
+    }
+    const actualOutputStringified = actualOutput.map((line) => {
       return line.toString()
     })
 
-    if (!arraysEqual(actualOutput, inputFile.expectedOutput)) {
-      const error = `Result mismatch for input ${inputFile.filename}. Expected: ${inputFile.expectedOutput}, actual ${actualOutput}`
+    if (!arraysEqual(actualOutputStringified, inputFile.expectedOutput)) {
+      const error = `Result mismatch for input ${inputFile.filename}. Expected: ${inputFile.expectedOutput}, actual ${actualOutputStringified}`
       console.error(error)
       result.errors.push(error)
     }
