@@ -1,5 +1,4 @@
 class ComplexityCalculator {
-
   constructor() {
     this.stepsExecuted = 0
   }
@@ -7,7 +6,6 @@ class ComplexityCalculator {
   executeStep() {
     this.stepsExecuted++
   }
-
 }
 
 module.exports = {

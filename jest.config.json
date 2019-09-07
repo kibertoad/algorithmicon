@@ -4,7 +4,7 @@
     "json"
   ],
   "testMatch": [
-    "<rootDir>/utils/**/*.(spec|test).js"
+    "<rootDir>/utils/**/*.spec.js"
   ],
   "testEnvironment": "node",
   "reporters": [ "default" ],

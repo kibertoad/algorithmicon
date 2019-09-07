@@ -12,8 +12,8 @@
     "test": "jest --config=jest.config.json",
     "test:update-snapshots": "jest --config=jest.config.json -u",
     "test:ci": "npm run eslint && npm run test",
-    "eslint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"utils/**/*.js\"",
-    "prettier": "prettier --write \"{code-kata,code-monoku,utils}/**/*.js\" index.js"
+    "eslint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"complexity-lab/**/*.js\" \"utils/**/*.js\"",
+    "prettier": "prettier --write \"{code-kata,code-monoku,utils,complexity-lab}/**/*.js\" index.js"
   },
   "dependencies": {
     "eol": "^0.9.1"
