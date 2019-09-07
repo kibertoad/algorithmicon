@@ -4,7 +4,8 @@
     "json"
   ],
   "testMatch": [
-    "<rootDir>/utils/**/*.spec.js"
+    "<rootDir>/utils/**/*.spec.js",
+    "<rootDir>/code-monoku/**/*.spec.js"
   ],
   "testEnvironment": "node",
   "reporters": [ "default" ],
