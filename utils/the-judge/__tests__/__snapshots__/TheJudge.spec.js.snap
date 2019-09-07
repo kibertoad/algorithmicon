@@ -2,7 +2,7 @@
 
 exports[`The Judge judgeByFile rejects incorrect answers 1`] = `
 Array [
-  "Result mismatch. Expected: 4,1,4,0,1099, actual 4,13,4,0,1099",
-  "Result mismatch. Expected: 4,13,4,1,1099, actual 4,13,4,0,1099",
+  "Result mismatch for input case_2.txt. Expected: 4,1,4,0,1099, actual 4,13,4,0,1099",
+  "Result mismatch for input case_3.txt. Expected: 4,13,4,1,1099, actual 4,13,4,0,1099",
 ]
 `;

@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "test": "jest --config=jest.config.json",
-    "test:coverage": "jest --config=jest.config.json --coverage",
-    "test:ci": "npm run eslint && npm run test:coverage",
+    "test:update-snapshots": "jest --config=jest.config.json -u",
+    "test:ci": "npm run eslint && npm run test",
     "eslint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"utils/**/*.js\"",
     "prettier": "prettier --write \"{code-kata,code-monoku,utils}/**/*.js\" index.js"
   },

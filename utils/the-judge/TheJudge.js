@@ -32,7 +32,7 @@ function compareOutputs(inputs, implementationFn) {
     })
 
     if (!arraysEqual(actualOutput, inputFile.expectedOutput)) {
-      const error = `Result mismatch. Expected: ${inputFile.expectedOutput}, actual ${actualOutput}`
+      const error = `Result mismatch for input ${inputFile.filename}. Expected: ${inputFile.expectedOutput}, actual ${actualOutput}`
       console.error(error)
       result.errors.push(error)
     }
