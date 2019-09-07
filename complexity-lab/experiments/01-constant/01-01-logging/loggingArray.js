@@ -1,6 +1,6 @@
-function logArray(input, calculator) {
+function logArray(input, counter) {
   console.log('Input was received')
-  calculator.executeStep()
+  counter.executeStep()
 }
 
 module.exports = {

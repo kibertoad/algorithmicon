@@ -6,18 +6,23 @@ const { generateHashTable } = require('../../../generators/hash')
 const inputs = [
   {
     hashTable: generateHashTable(generateOrderedStrings(5)),
-    keyToLookUp: 'a',
-    length: 2
+    keyToLookUp: 'C',
+    length: 5
   },
   {
-    hashTable: generateHashTable(['a', 'b']),
-    keyToLookUp: 'a',
-    length: 2
+    hashTable: generateHashTable(generateOrderedStrings(100)),
+    keyToLookUp: 'AA',
+    length: 100
   },
   {
-    hashTable: generateHashTable(['a', 'b']),
-    keyToLookUp: 'b',
-    length: 2
+    hashTable: generateHashTable(generateOrderedStrings(10000)),
+    keyToLookUp: 'CC',
+    length: 10000
+  },
+  {
+    hashTable: generateHashTable(generateOrderedStrings(10000)),
+    keyToLookUp: 'dummy',
+    length: 10000
   }
 ]
 

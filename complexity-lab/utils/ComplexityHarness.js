@@ -1,10 +1,11 @@
-const { ComplexityCalculator } = require('./ComplexityCalculator')
+const { StepCounter } = require('./StepCounter')
 
 function executeAlgorithm(implementationFn, inputs) {
   inputs.forEach((input) => {
-    const calculator = new ComplexityCalculator()
-    implementationFn(input, calculator)
-    console.log(`Input size ${input.length}. Execution steps: ${calculator.stepsExecuted}`)
+    console.log(`Start execution with input size: ${input.length}`)
+    const counter = new StepCounter()
+    implementationFn(input, counter)
+    console.log(`                Execution steps: ${counter.stepsExecuted}`)
   })
 }
 

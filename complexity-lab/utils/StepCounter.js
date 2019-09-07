@@ -1,4 +1,4 @@
-class ComplexityCalculator {
+class StepCounter {
   constructor() {
     this.stepsExecuted = 0
   }
@@ -9,5 +9,5 @@ class ComplexityCalculator {
 }
 
 module.exports = {
-  ComplexityCalculator
+  StepCounter
 }

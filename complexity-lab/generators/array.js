@@ -5,10 +5,16 @@ function generateOrderedStrings(size) {
   const result = []
 
   for (let i = 0; i < size; i++) {
-    const char = String.fromCharCode(
-      LETTERS_START_CODE + (i % (LETTERS_END_CODE - LETTERS_START_CODE))
-    )
-    result.push(char)
+    let unprocessedCounterSize = i
+    let builtString = ''
+
+    while (unprocessedCounterSize + 1 > 0) {
+      const charCode =
+        LETTERS_START_CODE + (unprocessedCounterSize % (LETTERS_END_CODE - LETTERS_START_CODE))
+      unprocessedCounterSize -= LETTERS_END_CODE - LETTERS_START_CODE
+      builtString += String.fromCharCode(charCode)
+    }
+    result.push(builtString)
   }
 
   return result
