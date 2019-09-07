@@ -1,6 +1,6 @@
 const { logArray } = require('./loggingArray')
-const { executeAlgorithm } = require('../../utils/ComplexityHarness')
-const { generateOrderedNumbers, generateUnorderedNumbers } = require('../../generators/array')
+const { executeAlgorithm } = require('../../../utils/ComplexityHarness')
+const { generateOrderedNumbers, generateUnorderedNumbers } = require('../../../generators/array')
 
 const inputs = [
   generateOrderedNumbers(1),
