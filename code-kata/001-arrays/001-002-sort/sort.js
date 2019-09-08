@@ -1,7 +1,9 @@
 /*
 
 Difficulty: Easy (3)
-Problem statement: Sort given element in ascending order
+Problem statement: Sort given array of numbers in ascending order
+Input format: Single row with multiple numbers, separated by single space
+Output format: Single row with numbers in ascending order, separated by single space
 
 */
 
