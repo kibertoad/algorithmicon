@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinarySearchTree correctly adds new element 1`] = `
+"Node 70. Left: 40. Right: 75
+Node 40. Left: 20. Right: 60
+Node 20. Left: null. Right: null
+Node 60. Left: null. Right: null
+Node 75. Left: null. Right: 80
+Node 80. Left: null. Right: 90
+Node 90. Left: null. Right: null
+"
+`;
