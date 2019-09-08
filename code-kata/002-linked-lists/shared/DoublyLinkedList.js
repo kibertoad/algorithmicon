@@ -5,6 +5,14 @@ class DoublyLinkedList {
     this.head = null // First element of a list
   }
 
+  static fromArray(arr) {
+    const list = new DoublyLinkedList()
+    arr.forEach((element) => {
+      list.add(element)
+    })
+    return list
+  }
+
   get(index) {
     if (this.head === null) {
       throw new Error('Index out of bounds')
