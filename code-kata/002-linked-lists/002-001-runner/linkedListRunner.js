@@ -7,10 +7,12 @@ positions in the list, and second half is shifted to occupy even positions in th
 into
  a_1 ->b_1 ->a_2 ->b_2 -> ... ->a_n ->b_n)
 
-Input format: Single row with multiple elements, separated by single space
-Output format: Single row with multiple element, ordered by specified rules, separated by single space
+Input format: Single row with even number of multiple elements, separated by single space
+Output format: Single row with multiple elements, ordered by specified rules, separated by single space
 
 */
+
+const { DoublyLinkedList } = require('../shared/DoublyLinkedList')
 
 function implementationFn(inputLines) {
   const inputArray = inputLines[0].split(' ')
@@ -18,7 +20,7 @@ function implementationFn(inputLines) {
 
   // Your implementation
 
-  return linkedList
+  return linkedList.toArray().join(' ')
 }
 
 module.exports = {

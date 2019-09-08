@@ -61,6 +61,24 @@ class DoublyLinkedList {
       currentNode.detach()
     }
   }
+
+  toArray() {
+    if (this.head === null) {
+      return []
+    }
+
+    const resultArr = []
+    let currentNode = this.head
+    while (currentNode !== null) {
+      resultArr.push(currentNode.value)
+      currentNode = currentNode.next
+    }
+    return resultArr
+  }
+
+  toString() {
+    return this.toArray().toString()
+  }
 }
 
 module.exports = {
