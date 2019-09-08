@@ -5,6 +5,7 @@
   ],
   "testMatch": [
     "<rootDir>/utils/**/*.spec.js",
+    "<rootDir>/code-kata/**/*.spec.js",
     "<rootDir>/code-monoku/**/*.spec.js"
   ],
   "testEnvironment": "node",
