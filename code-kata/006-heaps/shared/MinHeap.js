@@ -1,5 +1,3 @@
-const {} = require('./HeapNode')
-
 /**
  * A min-heap is a complete binary tree where each node is smaller than its children.
  * The most common approach is to store the heap in an array.
