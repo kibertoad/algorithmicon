@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MinHeap Correctly removes min element 1`] = `
+Array [
+  2,
+  3,
+  5,
+  9,
+  4,
+  6,
+  8,
+  10,
+]
+`;
+
+exports[`MinHeap Correctly sorts elements 1`] = `
+Array [
+  1,
+  2,
+  5,
+  3,
+  4,
+  6,
+  8,
+  9,
+  10,
+]
+`;

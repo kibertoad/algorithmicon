@@ -6,7 +6,7 @@ Most commonly encountered time complexities:
 
 * Logarithmic time: O(log n). Execution time is proportional to the logarithm of the input size. 
 In layman's terms this means that number of elements in the problem space gets significantly decreased 
-(e. g. halved) on each iteration. Binary trees and binary search are common examples of this.
+(e. g. halved) on each iteration. Binary trees, heaps and binary search are common examples of this.
 
 * Linear time: O(n). Execution time is proportional to the input size. Common example of this is any algorithm 
 that iterates through given array exactly once.

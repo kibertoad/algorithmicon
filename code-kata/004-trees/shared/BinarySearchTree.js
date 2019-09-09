@@ -7,14 +7,14 @@ and all right branch descendents are larger than it.
 
 class BinarySearchTree {
   constructor() {
-    this.root = null
+    this.rootNode = null
   }
 
   addChild(node) {
-    if (!this.root) {
-      this.root = node
+    if (!this.rootNode) {
+      this.rootNode = node
     } else {
-      this.root.addChild(node)
+      this.rootNode.addChild(node)
     }
   }
 
@@ -23,7 +23,7 @@ class BinarySearchTree {
   }
 
   toString() {
-    if (!this.root) {
+    if (!this.rootNode) {
       return '{}'
     }
 
@@ -32,7 +32,7 @@ class BinarySearchTree {
       result += `Node ${node.value}. Left: ${node.leftChild &&
         node.leftChild.value}. Right: ${node.rightChild && node.rightChild.value}\n`
     }
-    this.root.preOrderTraversal(toStringVisitorFn)
+    this.rootNode.preOrderTraversal(toStringVisitorFn)
     return result
   }
 }
