@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Graph Creates vertices and edges correctly 1`] = `
+"a -> b 
+b -> a c 
+c -> b 
+"
+`;
