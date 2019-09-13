@@ -10,10 +10,10 @@ Output format: Multiple rows (one row per vertex), where first number is a row i
 
 function implementationFn(inputLines) {
   const vertices = inputLines.shift().split(' ')
-  const edges = inputLines.map((inputLine) => {
-  })
+  const edges = inputLines.map((inputLine) => {})
 
-  const graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+  const graph = [
+    [0, 4, 0, 0, 0, 0, 0, 8, 0],
     [4, 0, 8, 0, 0, 0, 0, 11, 0],
     [0, 8, 0, 7, 0, 4, 0, 0, 2],
     [0, 0, 7, 0, 9, 14, 0, 0, 0],
@@ -21,7 +21,8 @@ function implementationFn(inputLines) {
     [0, 0, 4, 14, 10, 0, 2, 0, 0],
     [0, 0, 0, 0, 0, 2, 0, 1, 6],
     [8, 11, 0, 0, 0, 0, 1, 0, 7],
-    [0, 0, 2, 0, 0, 0, 6, 7, 0]]
+    [0, 0, 2, 0, 0, 0, 6, 7, 0]
+  ]
 
   // Your implementation
   return dijkstra(graph, 0)
@@ -37,8 +38,7 @@ function dijkstra(graph, sourceVertex) {
   // path tree or shortest distance from src to i is finalized
 
   // Initialize all distances as INFINITE and stpSet[] as false
-  for (let i = 0; i < graph.length; i++)
-    dist[i] = Number.MAX_VALUE, sptSet[i] = false
+  for (let i = 0; i < graph.length; i++) (dist[i] = Number.MAX_VALUE), (sptSet[i] = false)
 
   // Distance of source vertex from itself is always 0
   dist[sourceVertex] = 0
@@ -54,12 +54,15 @@ function dijkstra(graph, sourceVertex) {
 
     // Update dist value of the adjacent vertices of the picked vertex.
     for (let v = 0; v < graph.length; v++)
-
       // Update dist[v] only if is not in sptSet, there is an edge from
       // u to v, and total weight of path from src to  v through u is
       // smaller than current value of dist[v]
-      if (!sptSet[v] && graph[u][v] && dist[u] !== Number.MAX_VALUE
-        && dist[u] + graph[u][v] < dist[v]) {
+      if (
+        !sptSet[v] &&
+        graph[u][v] &&
+        dist[u] !== Number.MAX_VALUE &&
+        dist[u] + graph[u][v] < dist[v]
+      ) {
         dist[v] = dist[u] + graph[u][v]
       }
   }
