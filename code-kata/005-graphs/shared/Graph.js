@@ -20,6 +20,42 @@ class Graph {
     this.adjacencyList.get(vertex2).push(vertex1)
   }
 
+  breadthFirstTraversal(visitorFn, vertex) {
+    const visitedMap = {}
+    const queue = []
+
+    queue.push(vertex)
+    visitorFn(vertex)
+    visitedMap[vertex] = true
+    while (queue.length) {
+      const currentVertex = queue.shift() // Remove from the front of the queue
+      const edges = this.adjacencyList.get(currentVertex)
+      for (let i in edges) {
+        const neighborToVisit = edges[i]
+
+        if (!visitedMap[neighborToVisit]) {
+          visitorFn(neighborToVisit)
+          visitedMap[neighborToVisit] = true
+          queue.push(neighborToVisit)
+        }
+      }
+    }
+  }
+
+  depthFirstTraversal(visitorFn, vertex, visitedMap = {}) {
+    visitorFn(vertex)
+    visitedMap = visitedMap || {}
+    visitedMap[vertex] = true
+
+    const edges = this.adjacencyList.get(vertex)
+    for (let i in edges) {
+      const neighborToVisit = edges[i]
+      if (!visitedMap[neighborToVisit]) {
+        this.depthFirstTraversal(visitorFn, neighborToVisit, visitedMap)
+      }
+    }
+  }
+
   toString() {
     const keys = this.adjacencyList.keys()
     let result = ''
