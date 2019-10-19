@@ -1,6 +1,6 @@
 {
   "name": "the-judge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "eol": "^0.9.1"
   },
@@ -8,6 +8,6 @@
     "README.md",
     "LICENSE",
     "lib",
-    "code-monoku/*"
+    "index.js"
   ]
 }
