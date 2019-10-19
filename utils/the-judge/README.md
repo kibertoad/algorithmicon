@@ -4,7 +4,7 @@
 
 ```
 const { implementationFn } = require('./uniqueChars')
-const { TheJudge } = require('judge')
+const { TheJudge } = require('the-judge')
 
 const judge = new TheJudge({
   baseDir: __dirname
