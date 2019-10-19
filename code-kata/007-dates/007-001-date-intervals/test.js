@@ -1,5 +1,5 @@
 const { implementationFn } = require('./dateIntervals')
-const { TheJudge } = require('../../../utils/the-judge/TheJudge')
+const { TheJudge } = require('../../../utils/the-judge')
 
 const judge = new TheJudge({
   baseDir: __dirname

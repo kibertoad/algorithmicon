@@ -1,4 +1,4 @@
-const { TheJudge } = require('../TheJudge')
+const { TheJudge } = require('../lib/TheJudge')
 
 describe('The Judge', () => {
   describe('judgeByFile', () => {
