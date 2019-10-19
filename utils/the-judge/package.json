@@ -1,14 +1,13 @@
 {
   "name": "the-judge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "eol": "^0.9.1"
   },
   "files": [
     "README.md",
     "LICENSE",
-    "code-kata/*",
-    "code-monoku/*",
-    "utils/*"
+    "lib",
+    "code-monoku/*"
   ]
 }
