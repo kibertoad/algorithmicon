@@ -17,3 +17,22 @@ judge.judgeByFiles('inputs', 'outputs', implementationFn).then((result) => {
 })
 
 ```
+
+## Sample function implementation
+
+```
+// inputLines is an array of strings, where each string is a line from input file
+function implementationFn(inputLines) {
+  const inputString = inputLines[0]
+  const result = []
+
+  // Your implementation
+
+  // Result is expected to be an array of strings, where each string is a line from output file
+  return result
+}
+
+module.exports = {
+  implementationFn
+}
+```
