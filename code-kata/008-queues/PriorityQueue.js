@@ -1,13 +1,10 @@
-// User defined class
-// to store element and its priority
-class QElement {
+class Element {
   constructor(element, priority) {
     this.element = element
     this.priority = priority
   }
 }
 
-// PriorityQueue class
 class PriorityQueue {
   constructor() {
     this.items = []
@@ -19,8 +16,7 @@ class PriorityQueue {
    * @param {number} priority - lower number means higher priority
    */
   enqueue(element, priority) {
-    // creating object from queue element
-    const qElement = new QElement(element, priority)
+    const qElement = new Element(element, priority)
 
     // iterating through the entire item array to add element at the correct location of the Queue
     for (let i = 0; i < this.items.length; i++) {
@@ -31,8 +27,7 @@ class PriorityQueue {
       }
     }
 
-    // if the element have the lowest priority
-    // it is added at the end of the queue
+    // if the element have the lowest priority it is added at the end of the queue
     this.items.push(qElement)
   }
 
