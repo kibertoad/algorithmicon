@@ -2,10 +2,10 @@ const { TrieNode } = require('./TrieNode')
 
 /*
  Also known as prefix tree and radix tree.
- A trie can check if a string is a valid prefix in 0(K) time, where K is the length of the
+ A trie can check if a string is a valid prefix in O(K) time, where K is the length of the
 string. This is actually the same runtime as a hash table will take. Although we often refer to hash
-table lookups as being 0(1) time, this isn't entirely true. A hash table must read through all the
-characters in the input, which takes O ( K) time in the case of a word lookup.
+table lookups as being O(1) time, this isn't entirely true. A hash table must read through all the
+characters in the input, which takes O(K) time in the case of a word lookup.
  */
 class Trie {
   constructor() {

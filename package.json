@@ -12,7 +12,7 @@
     "test": "jest --config=jest.config.json",
     "test:update-snapshots": "jest --config=jest.config.json -u",
     "test:ci": "npm run eslint && npm run test",
-    "eslint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"complexity-lab/**/*.js\" \"utils/**/*.js\"",
+    "lint": "eslint --format codeframe \"code-kata/**/*.js\" \"code-monoku/**/*.js\" \"complexity-lab/**/*.js\" \"utils/**/*.js\"",
     "prettier": "prettier --write \"{code-kata,code-monoku,utils,complexity-lab}/**/*.js\" index.js"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "eslint-config-prettier": "^5.1.0",
     "eslint-plugin-prettier": "^2.7.0",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2"
+    "prettier": "1.18.2"
   },
   "jest": {
     "collectCoverage": false

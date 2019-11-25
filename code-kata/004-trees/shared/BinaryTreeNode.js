@@ -54,10 +54,10 @@ class BinaryTreeNode {
    */
   postOrderTraversal(visitorFn) {
     if (this.leftChild) {
-      this.leftChild.preOrderTraversal(visitorFn)
+      this.leftChild.postOrderTraversal(visitorFn)
     }
     if (this.rightChild) {
-      this.rightChild.preOrderTraversal(visitorFn)
+      this.rightChild.postOrderTraversal(visitorFn)
     }
     visitorFn(this)
   }
