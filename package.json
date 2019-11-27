@@ -19,11 +19,11 @@
     "eol": "^0.9.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^5.1.0",
-    "eslint-plugin-prettier": "^2.7.0",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
-    "prettier": "1.18.2"
+    "prettier": "1.19.1"
   },
   "jest": {
     "collectCoverage": false
