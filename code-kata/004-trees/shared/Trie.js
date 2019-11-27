@@ -2,10 +2,9 @@ const { TrieNode } = require('./TrieNode')
 
 /*
  Also known as prefix tree and radix tree.
- A trie can check if a string is a valid prefix in O(K) time, where K is the length of the
-string. This is actually the same runtime as a hash table will take. Although we often refer to hash
-table lookups as being O(1) time, this isn't entirely true. A hash table must read through all the
-characters in the input, which takes O(K) time in the case of a word lookup.
+ A trie can check if a string is a valid prefix in O(K) time, where K is the length of the string.
+ This is the same runtime as a hash table will take. Although we often refer to hash table lookups as being O(1) time, this isn't entirely true.
+ A hash table must read through all the characters in the input, which takes O(K) time in the case of a word lookup.
  */
 class Trie {
   constructor() {
@@ -13,27 +12,28 @@ class Trie {
   }
 
   /**
-   * Time complexity: O(k), k = word length
+   * Time complexity: O(K), K = word length
    */
   insert(word) {
     let node = this.rootNode // we start at the root
 
     // for every character in the word
-    for (let i = 0; i < word.length; i++) {
-      // check to see if character node exists in children.
-      if (!node.children[word[i]]) {
-        // if it doesn't exist, we then create it.
-        node.children[word[i]] = new TrieNode(word[i])
+    for (let charIndex = 0; charIndex < word.length; charIndex++) {
+      const character = word[charIndex]
 
-        // we also assign the parent to the child node.
-        node.children[word[i]].parent = node
+      // check to see if character node exists in children.
+      if (!node.children[character]) {
+        // if it doesn't exist, we then create it.
+        const newNode = new TrieNode(character)
+        node.children[character] = newNode
+        newNode.parent = node
       }
 
       // proceed to the next depth in the trie.
-      node = node.children[word[i]]
+      node = node.children[character]
 
       // finally, we check to see if it's the last word.
-      if (i === word.length - 1) {
+      if (charIndex === word.length - 1) {
         // if it is, we set the end flag to true.
         node.end = true
       }
@@ -48,11 +48,13 @@ class Trie {
     let node = this.rootNode
 
     // for every character in the word
-    for (let i = 0; i < word.length; i++) {
+    for (let charIndex = 0; charIndex < word.length; charIndex++) {
+      const character = word[charIndex]
+
       // check to see if character node exists in children.
-      if (node.children[word[i]]) {
+      if (node.children[character]) {
         // if it exists, proceed to the next depth of the trie.
-        node = node.children[word[i]]
+        node = node.children[character]
       } else {
         // doesn't exist, return false since it's not a valid word.
         return false
@@ -65,7 +67,7 @@ class Trie {
 
   /**
    * Returns every word with given prefix
-   * Time complexity: O(p + n), p = prefix length, n = number of child paths
+   * Time complexity: O(P + N), P = prefix length, N = number of child paths
    */
   find(prefix) {
     let node = this.rootNode

@@ -11,6 +11,8 @@ In layman's terms this means that number of elements in the problem space gets s
 * Linear time: O(n). Execution time is proportional to the input size. Common example of this is any algorithm 
 that iterates through given array exactly once.
 
+O(m+n) is also a linear complexity. Common example of this is word lookup in a Trie Tree using a prefix, as well as Breadth-First Search.
+
 O(mn) is usually considered to be linear as well. Common example of this is processing each element of array X for each element of array Y
 
 * Linearithmic time: O(n log n). This is complexity of optimized sorting algorithms, such as heapsort, mergesort and quicksort. 

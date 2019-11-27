@@ -5,10 +5,10 @@ class TrieNode {
 
     this.parent = null
 
-    // we have hash table of children
+    // we have hash table of children, where key is a character
     this.children = {}
 
-    // check to see if the node is at the end
+    // check to see if the node is at the end (meaning it finishes forming a complete word)
     this.end = false
   }
 

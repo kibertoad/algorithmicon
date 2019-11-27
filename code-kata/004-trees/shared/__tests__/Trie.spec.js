@@ -16,6 +16,15 @@ describe('Trie', () => {
     trie.insert('martian')
     trie.insert('venus')
 
+    /**
+     * M    V
+     * A    E
+     * R-T  N
+     * S I  U
+     *   A  S
+     *   N
+     */
+
     expect(trie.find('mar')).toEqual(['martian', 'mars'])
     expect(trie.find('mart')).toEqual(['martian'])
     expect(trie.find('marty')).toEqual([])
