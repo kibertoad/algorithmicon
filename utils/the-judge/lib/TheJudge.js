@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const eol = require('eol')
+const { isNumber } = require('zoology')
 
 const DEFAULT_OPTIONS = Object.freeze({
   timeout: 10000
@@ -22,21 +23,37 @@ class TheJudge {
   }
 }
 
+function normalizeOutput(actualOutput) {
+  let result = actualOutput
+
+  if (!Array.isArray(actualOutput)) {
+    result = [actualOutput]
+  }
+
+  if (result.length === 0) {
+    return result
+  }
+
+  // If we have an array of numbers, they are likely supposed to be on same single line
+  if (isNumber(result[0])) {
+    return [result.join(' ')]
+  }
+
+  return result.map((line) => {
+    return line.toString()
+  })
+}
+
 function compareOutputs(inputs, implementationFn) {
   const result = {
     errors: []
   }
   inputs.forEach((inputFile) => {
-    let actualOutput = implementationFn(inputFile.input)
-    if (!Array.isArray(actualOutput)) {
-      actualOutput = [actualOutput]
-    }
-    const actualOutputStringified = actualOutput.map((line) => {
-      return line.toString()
-    })
+    const actualOutput = implementationFn(inputFile.input)
+    let normalizedActualOutput = normalizeOutput(actualOutput)
 
-    if (!arraysEqual(actualOutputStringified, inputFile.expectedOutput)) {
-      const error = `Result mismatch for input ${inputFile.filename}. Expected: ${inputFile.expectedOutput}, actual ${actualOutputStringified}`
+    if (!arraysEqual(normalizedActualOutput, inputFile.expectedOutput)) {
+      const error = `Result mismatch for input ${inputFile.filename}. Expected: ${inputFile.expectedOutput}, actual ${normalizedActualOutput}`
       console.error(error)
       result.errors.push(error)
     }

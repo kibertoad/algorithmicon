@@ -16,7 +16,8 @@
     "prettier": "prettier --write \"{code-kata,code-monoku,utils,complexity-lab}/**/*.js\" index.js"
   },
   "dependencies": {
-    "eol": "^0.9.1"
+    "eol": "0.9.1",
+    "zoology": "1.0.0"
   },
   "devDependencies": {
     "eslint": "^6.7.1",

@@ -29,6 +29,6 @@ to support either TypeScript or latest and greatest ECMAScript version. Due to t
 
 ## Recommended reading
 
-* "Cracking the Coding Interview: 189 Programming Questions and Solutions" - https://www.amazon.com/dp/0984782850/
-* "Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles, Fifth Edition" - https://www.amazon.com/dp/819324527X
-* "Grokking Algorithms: An illustrated guide for programmers and other curious people" - https://www.amazon.com/dp/1617292230
+* "A Common-Sense Guide to Data Structures and Algorithms, Second Edition" - https://pragprog.com/book/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition
+* "Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles, Fifth Edition" - https://www.goodreads.com/book/show/31923984-data-structures-and-algorithms-made-easy
+* "Grokking Algorithms: An illustrated guide for programmers and other curious people" - https://www.manning.com/books/grokking-algorithms

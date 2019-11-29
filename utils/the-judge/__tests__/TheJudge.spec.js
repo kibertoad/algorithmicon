@@ -9,7 +9,7 @@ describe('The Judge', () => {
       const implementationFn = (inputLines) => {
         return inputLines.map((inputLine) => {
           const columns = inputLine.split(' ')
-          return Number.parseInt(columns[0]) + Number.parseInt(columns[1])
+          return (Number.parseInt(columns[0]) + Number.parseInt(columns[1])).toString()
         })
       }
 
@@ -25,7 +25,7 @@ describe('The Judge', () => {
       const implementationFn = (inputLines) => {
         return inputLines.map((inputLine) => {
           const columns = inputLine.split(' ')
-          return Number.parseInt(columns[0]) + Number.parseInt(columns[1])
+          return (Number.parseInt(columns[0]) + Number.parseInt(columns[1])).toString()
         })
       }
 
